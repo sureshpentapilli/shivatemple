@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+ <section>
+    <!-- Om Chant Audio Toggle -->
+<button id="audioToggle">
+    <i class="fas fa-volume-mute"></i>
+  </button>
+  
+  <audio id="omChant" loop>
+    <source src="assets/om-chant.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="assets/images/logo.png" alt="Logo" style="height: 100px;width: 100px; ">
+                <div class="mb-0 text-white heading-text">
+                  SRI SHAKTIPEETHA
+                  KOTI LINGA<br>
+                  KSHETHRAM
+                </div>
+              </a>
+              
+              
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarNav" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pooja">Pooja</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+ </section>
+    <div class="form-bg">
+        <section class="container py-5" >
+            <div class="row align-items-center">
+                <!-- Left Image -->
+                <div class="col-md-6 mb-4 mb-md-0 lingam-container">
+                    <img src="assets/images/1cr.png" alt="Pooja" class="img-fluid rounded  lingam-img">
+                </div>
+    
+                <!-- Right Form -->
+                <div class="col-md-6 mx-auto">
+                    <div class="booking-form">
+                      <h3 class="text-center text-warning mb-4">Book Your Shivalingam Slot</h3>
+                      <form id="bookingForm">
+                        <!-- Slot Selection -->
+                        <div class="mb-4">
+                          <label for="slot" class="form-label">Select Slot</label>
+                          <select id="slot" class="form-select" required>
+                            <option value="" disabled selected>Choose a slot</option>
+                            <optgroup label="Group A">
+                              <option value="A1">A1</option>
+                              <option value="A2">A2</option>
+                              <option value="A3">A3</option>
+                              <option value="A4">A4</option>
+                            </optgroup>
+                            <optgroup label="Group B">
+                              <option value="B1">B1</option>
+                              <option value="B2">B2</option>
+                              <option value="B3">B3</option>
+                              <option value="B4">B4</option>
+                            </optgroup>
+                            <optgroup label="Group C">
+                              <option value="C1">C1</option>
+                              <option value="C2">C2</option>
+                              <option value="C3">C3</option>
+                              <option value="C4">C4</option>
+                            </optgroup>
+                            <optgroup label="Group D">
+                              <option value="D1">D1</option>
+                              <option value="D2">D2</option>
+                              <option value="D3">D3</option>
+                              <option value="D4">D4</option>
+                            </optgroup>
+                            <optgroup label="Group E">
+                              <option value="E1">E1</option>
+                              <option value="E2">E2</option>
+                              <option value="E3">E3</option>
+                              <option value="E4">E4</option>
+                            </optgroup>
+                            <optgroup label="Group F">
+                              <option value="F1">F1</option>
+                              <option value="F2">F2</option>
+                              <option value="F3">F3</option>
+                              <option value="F4">F4</option>
+                            </optgroup>
+                            <optgroup label="Group G">
+                              <option value="G1">G1</option>
+                              <option value="G2">G2</option>
+                              <option value="G3">G3</option>
+                              <option value="G4">G4</option>
+                            </optgroup>
+                          </select>
+                        </div>
+                
+                        <!-- Name & Email -->
+                        <div class="row">
+                          <div class="col-md-6 mb-4">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Your name" required>
+                          </div>
+                          <div class="col-md-6 mb-4">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" class="form-control" placeholder="you@example.com" required>
+                          </div>
+                        </div>
+                
+                        <!-- Phone & Location -->
+                        <div class="row">
+                          <div class="col-md-6 mb-4">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="1234567890" required>
+                          </div>
+                          <div class="col-md-6 mb-4">
+                            <label for="location" class="form-label">Location</label>
+                            <input type="text" id="location" class="form-control" placeholder="City/Village" required>
+                          </div>
+                        </div>
+                
+                        <!-- Price Display -->
+                        <div id="priceSection" class="mb-4 d-none">
+                          <label class="form-label">Price</label>
+                          <div id="priceDisplay" class="fw-bold fs-5 text-success">₹0</div>
+                        </div>
+                
+                        <!-- Submit -->
+                        <div class="text-center">
+                          <button type="submit" class="btn btn-gradient px-5 py-2 fw-bold">
+                            <i class="fas fa-rupee-sign me-2"></i>Pay Now
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+            </div>
+        </section>
+    </div>
+
+<section>
+    
+    <footer>
+        <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+      
+          <!-- About Us -->
+          <div style="flex: 1; min-width: 220px; margin: 20px;">
+            <h3 style="color: #d11a2a;">About Us</h3>
+            <p>You need to be sure there isn’t anything embarrassing hidden in the middle of text.</p>
+            <p>📞 987-987-930-302</p>
+            <p>📧 info@example.com</p>
+            <p>📍 14/A, Poor Street City Tower, New York USA</p>
+          </div>
+      
+          <!-- Information -->
+          <div style="flex: 1; min-width: 150px; margin: 20px;">
+            <h3 style="color: #d11a2a;">Information</h3>
+            <ul style="list-style: none; padding: 0; color: #333;">
+              <li>🕉 Puja</li>
+              <li>🕉 Services</li>
+              <li>🕉 Temple</li>
+              <li>🕉 Holis</li>
+              <li>🕉 Volunteers</li>
+              <li>🕉 Donation</li>
+            </ul>
+          </div>
+      
+          <!-- Others -->
+          <div style="flex: 1; min-width: 150px; margin: 20px;">
+            <h3 style="color: #d11a2a;">Others</h3>
+            <ul style="list-style: none; padding: 0; color: #333;">
+              <li>🕉 Shop</li>
+              <li>🕉 Checkout</li>
+              <li>🕉 Donation</li>
+              <li>🕉 Contact Us</li>
+              <li>🕉 Blog</li>
+            </ul>
+          </div>
+      
+          <!-- Recent Posts -->
+          <div style="flex: 1; min-width: 250px; margin: 20px;">
+            <h3 style="color: #d11a2a;">Recent Posts</h3>
+            <div>
+              <p style="font-size: 14px;">📅 May 20, 2024</p>
+              <p style="font-weight: bold; color: #d11a2a;">Temple companies are being so transparent with their work</p>
+            </div>
+            <div>
+              <p style="font-size: 14px;">📅 May 20, 2024</p>
+              <p style="font-weight: bold; color: #d11a2a;">Testimony love offering so blessed</p>
+            </div>
+            <div>
+              <p style="font-size: 14px;">📅 May 20, 2024</p>
+              <p style="font-weight: bold; color: #d11a2a;">As we've all discovered by now, the world can change</p>
+            </div>
+          </div>
+        </div>
+      
+        <div style="text-align: center; padding: 20px 0; border-top: 1px solid #eee; margin-top: 20px;">
+            <p>COPYRIGHT © SRI SHAKTIPEETHA KOTI LINGA KSHETHRAM - 2025</p>
+            <h2 style="font-family: cursive; color: #d11a2a;">🕉 Maharatri</h2>
+            <div style="margin-top: 15px;">
+              <a href="#" style="margin: 0 5px;"><i class="fab fa-facebook fa-2x"></i></a>
+              <a href="#" style="margin: 0 5px;"><i class="fab fa-linkedin fa-2x"></i></a>
+              <a href="#" style="margin: 0 5px;"><i class="fab fa-twitter fa-2x"></i></a>
+              <!-- <a href="#" style="margin: 0 5px;"><i class="fas fa-arrow-up fa-2x"></i></a> -->
+            </div>
+          </div>
+          
+
+        <div>
+            <p>&copy; 2025 Shiva Temple | Har Har Mahadev 🙏</p>
+        </div>
+      </footer>
+</section>
+    <!-- script -->
+    <script src="assets/js/audio.js"></script>
+    <script>
+        const audio = document.getElementById("omChant");
+        const button = document.getElementById("audioToggle");
+        const icon = button.querySelector("i");
+      
+        // Ensure audio doesn't autoplay with sound unless user interacts
+        document.addEventListener("DOMContentLoaded", () => {
+          audio.muted = true; // Keep it muted initially
+        });
+      
+        button.addEventListener("click", () => {
+          if (audio.paused) {
+            audio.muted = false;
+            audio.play();
+            icon.classList.remove("fa-volume-mute");
+            icon.classList.add("fa-volume-up");
+          } else {
+            audio.pause();
+            icon.classList.remove("fa-volume-up");
+            icon.classList.add("fa-volume-mute");
+          }
+        });
+      </script>
+</body>
+</html>

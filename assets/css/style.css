@@ -1,0 +1,856 @@
+/* body {
+  background: url("../images/main-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  font-family: "Poppins", sans-serif;
+} */
+.hero {
+  background: url("../images/Lord-Shiva.jpg") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*text-align: center;*/
+  position: relative;
+}
+.hero h1 {
+  font-size: 6rem;
+  color: #000;
+  animation: fadeInText 3s ease-in-out infinite alternate;
+}
+@keyframes fadeInText {
+  from {
+    opacity: 0.3;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+.heading-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.3;
+  text-shadow:
+    1px 1px 0 #ccc,
+    2px 2px 0 #aaa,
+    3px 3px 0 #888;
+}
+.navbar-dark{
+  background-color: lightgray;
+}
+
+#navbarNav li {
+  padding: 0px 15px;
+}
+nav a.nav-link {
+  color: #fff !important;
+  font-weight: bold;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+}
+footer {
+  text-align: center;
+  background: #111827;
+  padding: 20px;
+  color: #ccc;
+}
+#audioToggle {
+  position: fixed;
+  top: 40px;
+  right: 20px;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: #facc15;
+  font-size: 1.5rem;
+  /* padding: 12px; */
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+#audioToggle:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+#audioToggle:active {
+  transform: scale(0.95);
+}
+
+#audioToggle i {
+  transition: transform 0.3s ease;
+}
+
+#audioToggle.playing i {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.animated-menu .nav-item {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeSlideIn 0.6s ease forwards;
+}
+
+.animated-menu .nav-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.animated-menu .nav-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.animated-menu .nav-item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.animated-menu .nav-item:nth-child(4) {
+  animation-delay: 0.8s;
+}
+.animated-menu .nav-item:nth-child(5) {
+  animation-delay: 1s;
+}
+.animated-menu .nav-item:nth-child(6) {
+  animation-delay: 1.2s;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+#carouselMulti {
+  position: relative;
+}
+
+#carouselMulti .carousel-control-prev,
+#carouselMulti .carousel-control-next {
+  width: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+#carouselMulti .carousel-control-prev {
+  left: -50px; /* adjust as needed */
+}
+
+#carouselMulti .carousel-control-next {
+  right: -50px; /* adjust as needed */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none;
+  color: black;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: white; /* optional: gives contrast */
+  border-radius: 50%;
+}
+
+.carousel-control-prev-icon::before {
+  content: "‹"; /* Left arrow */
+}
+
+.carousel-control-next-icon::before {
+  content: "›"; /* Right arrow */
+}
+#booking input,
+#booking select {
+  background-color: #fefefe;
+  color: #111;
+}
+.gradient-btn {
+  background: linear-gradient(
+    135deg,
+    #ff4e00,
+    #8e2de2
+  ); /* Deep orange to violet */
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(142, 45, 226, 0.4);
+}
+
+.gradient-btn:hover {
+  background: linear-gradient(135deg, #8e2de2, #ff4e00);
+  color: #fff;
+  box-shadow: 0 6px 15px rgba(255, 78, 0, 0.6);
+}
+.thankyou-box {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+.btn-custom {
+  margin: 10px;
+  border-radius: 30px;
+  padding: 10px 25px;
+}
+
+.receipt-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", sans-serif;
+}
+.receipt-header {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+.receipt-footer {
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: left;
+}
+#qrCode {
+  margin-top: 10px;
+}
+
+.receipt-container {
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/shiva.jpg"); /* Change this to your image path */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.08; /* Adjust this value for desired visibility */
+  z-index: 0;
+}
+
+.receipt-content {
+  position: relative;
+  z-index: 1;
+}
+
+.receipt-header img {
+  width: 20%;
+}
+.receipt,
+.receipt p {
+  color: #000;
+}
+.navbar-brand img {
+  width: 20%;
+}
+.text-warning {
+  font-size: 40px;
+  margin-bottom: 40px;
+  color: #fff !important;
+  font-weight: 700;
+}
+#about p,
+#donate p {
+  width: 80%;
+  margin: 0px auto 30px auto;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+.sticky-top {
+  background: rgba(0, 0, 0, 0.5);
+}
+.form-label {
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+footer {
+  position: relative;
+  background-image: url('../images/squares.png');
+  background-size: cover;
+  background-repeat: no-repeat !important;
+  background-position: center;
+  color: white;
+  z-index: 1;
+  overflow: hidden;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Adjust overlay color/opacity */
+  z-index: -1; /* keeps overlay behind the content */
+}
+
+
+
+footer h3 {
+  color: #d11a2a;
+  text-align: start;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  color: white !important;
+  text-align: start;
+}
+
+footer ul li {
+  padding: 4px 0;
+}
+
+footer p {
+  color: white;
+}
+
+footer .copyright {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+  margin-top: 20px;
+}
+
+footer .social-icons img {
+  width: 30px;
+  margin: 0 5px;
+}
+
+
+/* services */
+.services-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-image: url('../images/bg1.jpg'); /* path to your image */
+  background-size: cover;       /* ensures image covers the whole area */
+  background-repeat: no-repeat !important; /* prevents repeating */
+  background-position: center;  /* centers the image */
+  color: white;                 /* optional: makes text readable */
+  /* padding: 40px 0; */
+}
+
+.services-section h2 {
+  font-size: 2.5rem;
+  color: #b33c00;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px #ddd;
+}
+
+.pooja{
+  font-size: 2.5rem;
+  color: #b33c00;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px #ddd;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: #fff3e6;
+  border: 2px solid #ffd9b3;
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+}
+
+.service-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  color: #cc3300;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+📁 Folder St.services-section {
+  padding: 50px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.services-section h2 {
+  font-size: 2.5rem;
+  color: #b33c00;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px #ddd;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: #fff3e6;
+  border: 2px solid #ffd9b3;
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+}
+
+.service-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  color: #cc3300;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+
+/* carousel */
+.carousel-item-overlay {
+  position: relative;
+ 
+}
+
+
+.carousel-item-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.5);  */
+  z-index: 1;
+}
+
+.carousel-item-overlay img {
+  position: relative;
+  z-index: 0;
+}
+
+.carousel-item {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5); /* semi-transparent black */
+  z-index: 1;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  z-index: 2;
+  color: white;
+}
+
+.title {
+  /* color: #db4242; */
+  font-weight: 800;
+  font-size: 52px;
+  font-family: "Poppins", sans-serif;
+}
+
+.sigma_btn-custom {
+  background-color: #7b2cbf;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sigma_btn-custom.white {
+  background-color: white;
+  color: #7b2cbf;
+}
+
+.blockquote{
+  position: relative;
+  margin: 20px 0;
+  font-size: 18px;
+  color: #FF0000;
+  padding: 10px 30px;
+  /* background-position: center; */
+  background-size: cover;
+  background-color: #f7f7f7;
+  border-left: 2px solid #7E4555;
+  font-weight: bold;
+
+}
+
+p.blockquote:before, p.blockquote:after {
+  content: "";
+  position: absolute;
+  left: -9px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 30px;
+  background-color: #7E4555;
+}
+
+
+
+p.blockquote:after {
+content: "";
+position: absolute;
+left: -9px;
+top: 50%;
+transform: translateY(-50%);
+width: 2px;
+height: 30px;
+background-color: #7E4555;
+}
+p.blockquote:after {
+left: 6px;
+}
+
+.highlighted-word {
+  color: #ffcc00; /* You can choose any standout color */
+  font-weight: bold !important;
+}
+
+/* Animate text appearance */
+.animated-text {
+  animation: fadeSlide 1s ease-in-out;
+}
+
+/* Animation keyframes */
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* cards */
+
+.services-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #624e4e;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.service-card {
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.service-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-back {
+  background: #fff;
+  color: #222;
+  transform: rotateY(180deg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+/* . form*/
+
+.booking-form {
+  background: url('../images/bg1.jpg') no-repeat center center;
+  background-size: cover;
+  border-radius: 1rem;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-top: 60px;
+  color: #fff; /* Optional: makes text white for better contrast */
+  position: relative;
+  z-index: 1;
+}
+
+/* Optional: Add a semi-transparent overlay for readability */
+.booking-form::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  border-radius: 1rem;
+  z-index: -1;
+}
+
+
+.btn-gradient {
+  background: linear-gradient(45deg, #d11a2a, #f07b3f);
+  color: white;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(45deg, #b10f22, #d45f1d);
+}
+
+.form-label {
+  font-weight: 600;
+}
+
+input::placeholder {
+  font-style: italic;
+  color: #aaa;
+}
+
+#booking input, #booking select{
+  background-color: transparent !important;
+  color: white !important;
+}
+
+
+.form-bg {
+  position: relative;
+  background-image: url('../images/04.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  z-index: 1;
+}
+
+/* Overlay using ::before */
+.form-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Change opacity/color here */
+  z-index: -1;
+}
+
+/* Optional: Ensure children are above the overlay */
+.form-bg > * {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.lingam-img {
+  animation: zoomIn 1s ease-in-out;
+}
+
+.lingam-img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.form-select{
+  background-color: transparent !important;
+}
+
+.form-control{
+  background-color: transparent !important;
+
+}
+
+
+
+
+
+.pooja-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.pooja-card:hover .pooja-img {
+  transform: scale(1.05);
+}
+
+.animate-card {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+.pooja {
+  position: relative;
+  display: inline-block;
+  color: #dc3545; /* Optional: deep red */
+  font-weight: bold;
+  font-size: 2rem;
+  padding-bottom: 10px;
+  margin: 0 auto;
+  text-align: center;
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* center the element itself */
+.pooja {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.pooja::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(to right, #ffa500, #f72234);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: underlineGrow 1.2s ease-out forwards;
+}
+
+@keyframes underlineGrow {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+

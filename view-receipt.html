@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Receipt</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link rel="icon" href="assets/images/logo.png" type="image">
+</head>
+
+<body class="receipt">
+
+    <div class="receipt-container text-center">
+
+        <div class="bg-overlay"></div>
+
+        <div class="receipt-content position-relative p-4">
+
+
+            <!-- Header -->
+            <div class="receipt-header container text-center" style="max-width: 800px;">
+                <!-- Logo -->
+                <img src="assets/images/logo.png" alt="Temple Logo" class="logo mb-3" />
+
+                <!-- Title -->
+                <h4 class="text-success mb-3">🕉️ Shivalingam Slot Booking Receipt</h4>
+
+                <!-- Side by Side Receipt No and Date -->
+                <div class="d-flex justify-content-center gap-4 flex-wrap">
+                    <p class="mb-0"><strong>Receipt No:</strong> <span id="rReceiptNo">RCPT-982407</span></p>
+                    <p class="mb-0"><strong>Date:</strong> <span id="rDate">06/04/2025</span></p>
+                </div>
+            </div>
+
+
+
+
+            <!-- Receipt Body -->
+            <div class="container mt-4" style="max-width: 800px;">
+                <!-- keeps it A4-friendly -->
+                <table class="table table-bordered align-middle text-start">
+                    <tbody>
+                        <tr>
+                            <th style="width: 33%;">Name</th>
+                            <td colspan="2" id="rName"></td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td colspan="2" id="rEmail" style="word-break: break-all;"></td>
+                        </tr>
+                        <tr>
+                            <th>Phone</th>
+                            <td colspan="2" id="rPhone"></td>
+                        </tr>
+                        <tr>
+                            <th>Location</th>
+                            <td colspan="2" id="rLocation"></td>
+                        </tr>
+                        <tr>
+                            <th>Slot</th>
+                            <td id="rSlot"></td>
+                        </tr>
+                        <tr>
+                            <th>Amount Paid</th>
+                            <td id="rPrice" class="text-primary fw-bold"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Print Button -->
+            <div class="mt-4">
+                <button onclick="window.print()" class="btn btn-outline-dark">🧾 Print / Save as PDF</button>
+            </div>
+
+            <!-- Footer -->
+            <!-- Receipt Footer -->
+            <div class="receipt-footer container mt-5 position-relative" style="max-width: 800px;">
+                <div class="row">
+                    <div class="col text-muted small">
+                        <p class="mb-0">Thank you for your devotion 🙏</p>
+                        <p class="mb-0">Please keep this receipt for your records.</p>
+                    </div>
+                </div>
+
+                <!-- QR Code in Bottom Right -->
+                <div style="position: absolute; bottom: 0; right: 0;">
+                    <canvas id="qrCode" style="height: 60px; width: 60px;"></canvas>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const data = JSON.parse(localStorage.getItem("bookingData"));
+    
+          if (data) {
+            document.getElementById("rName").textContent = data.name;
+            document.getElementById("rEmail").textContent = data.email;
+            document.getElementById("rPhone").textContent = data.phone;
+            document.getElementById("rLocation").textContent = data.location;
+            document.getElementById("rSlot").textContent = data.slot;
+            document.getElementById("rPrice").textContent = data.price;
+    
+            // Generate random receipt number
+            const receiptNo = 'RCPT-' + Math.floor(100000 + Math.random() * 900000);
+            document.getElementById("rReceiptNo").textContent = receiptNo;
+    
+            const currentDate = new Date().toLocaleString();
+            document.getElementById("rDate").textContent = currentDate;
+    
+            // QR code content
+            const qrContent = `Temple Receipt\nReceipt No: ${receiptNo}\nName: ${data.name}\nSlot: ${data.slot}\nAmount: ${data.price}\nDate: ${currentDate}`;
+    
+            QRCode.toCanvas(document.getElementById("qrCode"), qrContent, { width: 150 }, function (error) {
+              if (error) console.error(error);
+            });
+          }
+        });
+    </script>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/audio.js"></script>
+
+</body>
+
+</html>

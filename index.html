@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shiva Temple</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link rel="icon" href="assets/images/logo.png" type="image">
+  
+</head>
+
+<body>
+
+<!-- Om Chant Audio Toggle -->
+<button id="audioToggle">
+    <i class="fas fa-volume-mute"></i>
+  </button>
+  
+  <audio id="omChant" loop>
+    <source src="assets/om-chant.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <img src="assets/images/logo.png" alt="Logo" style="height: 100px;width: 100px; ">
+                <div class="mb-0 text-white heading-text">
+                  SRI SHAKTIPEETHA
+                  KOTI LINGA<br>
+                  KSHETHRAM
+                </div>
+              </a>
+              
+              
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarNav" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pooja">Pooja</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <!-- <div class="hero d-flex align-items-center justify-content-start">
+        <div class="container">
+            <h1>ॐ नमः शिवाय</h1>
+        </div>
+    </div> -->
+
+    <section>
+        <div>
+          <div
+            id="carouselExampleControls"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+            
+              <div class="carousel-item active position-relative">
+                <img
+                  src="assets/images/slide1.jpg"
+                  class="d-block w-100"
+                  alt="Slide 1"
+                />
+                <div class="overlay"></div>
+                <div class="carousel-caption text-start">
+                  <div class="container">
+                    <div class="row align-items-center">
+                      <div class="col-lg-6 text-block">
+                        <h1 class="title animated-text">
+                          We are a Hindu that
+                          <span class="highlighted-word">believe</span> in
+                          Shiva
+                        </h1>
+                        <p class="blockquote mb-0 bg-transparent animated-text">
+                          We are a Hindu that believes in Lord Rama and Vishnu
+                          Deva. This is where you should start.
+                        </p>
+                        <div class="section-button d-flex align-items-center mt-3">
+                          <a href="/contact-us" class="sigma_btn-custom">
+                            Join Today
+                          </a>
+                          <a
+                            href="/services"
+                            class="ms-3 sigma_btn-custom white"
+                          >
+                            View Services
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+           
+              <div class="carousel-item position-relative">
+                <img
+                  src="assets/images/slide2.jpg"
+                  class="d-block w-100"
+                  alt="Slide 2"
+                />
+                <div class="overlay"></div>
+                <div class="carousel-caption text-start">
+                  <div class="container">
+                    <div class="row align-items-center">
+                      <div class="col-lg-6">
+                        <h1 class="title animated-text">Join Our   <span class="highlighted-word">Devotional</span>  Community</h1>
+                        <p class="blockquote mb-0 bg-transparent animated-text">
+                          Embrace spirituality and be part of a journey with
+                          like-minded believers.
+                        </p>
+                        <div class="section-button d-flex align-items-center mt-3">
+                          <a href="/about-us" class="sigma_btn-custom">
+                            Learn More
+                          </a>
+                          <a
+                            href="/events"
+                            class="ms-3 sigma_btn-custom white"
+                          >
+                            Upcoming Events
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+             
+              <div class="carousel-item position-relative">
+                <img
+                  src="assets/images/slide3.jpg"
+                  class="d-block w-100"
+                  alt="Slide 3"
+                />
+                <div class="overlay"></div>
+                <div class="carousel-caption text-start">
+                  <div class="container">
+                    <div class="row align-items-center">
+                      <div class="col-lg-6">
+                        <h1 class="title animated-text">Celebrate   <span class="highlighted-word">Faith & Tradition</span> </h1>
+                        <p class="blockquote mb-0 bg-transparent animated-text">
+                          Dive into ancient traditions and rituals that bind us
+                          through generations.
+                        </p>
+                        <div class="section-button d-flex align-items-center mt-3">
+                          <a href="/gallery" class="sigma_btn-custom">
+                            View Gallery
+                          </a>
+                          <a
+                            href="/donate"
+                            class="ms-3 sigma_btn-custom white"
+                          >
+                            Support Us
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            
+              <div class="carousel-item position-relative">
+                <img
+                  src="assets/images/Lord-Shiva.jpg"
+                  class="d-block w-100"
+                  alt="Slide 3"
+                />
+                <div class="overlay"></div>
+                <div class="carousel-caption text-start">
+                  <div class="container">
+                    <div class="row align-items-center">
+                      <div class="col-lg-6">
+                        <h1>ॐ नमः शिवाय</h1>
+                        <p class="blockquote mb-0 bg-transparent animated-text">
+                          Dive into ancient traditions and rituals that bind us
+                          through generations.
+                        </p>
+                        <div class="section-button d-flex align-items-center mt-3">
+                          <a href="/gallery" class="sigma_btn-custom">
+                            View Gallery
+                          </a>
+                          <a
+                            href="/donate"
+                            class="ms-3 sigma_btn-custom white"
+                          >
+                            Support Us
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+    <!-- About -->
+    <!-- <section id="about" class="container text-center">
+        <h2 class="text-warning">About the Temple</h2>
+        <p>Nestled in a serene and sacred atmosphere, our Shiva Temple stands as a spiritual beacon for devotees seeking divine blessings, peace, and inner strength. The temple is dedicated to Lord Shiva – the destroyer of evil and the transformer – revered
+            as the supreme being in Shaivism.
+        </p>
+        <p>Our temple has a rich history that spans over decades, attracting pilgrims and seekers from across the region. The main sanctum houses a magnificent Shiva Lingam, which is worshipped with daily rituals, including the sacred Rudrabhishekam, Abhishekam
+            with milk, honey, ghee, and the chanting of the holy mantra “ॐ नमः शिवाय”.
+        </p>
+        <p>Every corner of the temple echoes divine energy – from the sound of conch shells to the rhythmic beats of the damru, creating a spiritually uplifting environment. Devotees gather in large numbers during festivals such as Maha Shivaratri, Shravan
+            Maas, and Pradosham, making the temple a vibrant hub of devotion and celebration.
+        </p>
+        <p>Besides spiritual services, the temple also serves the community through charitable events, free food distribution (Annadanam), and educational support for underprivileged children. With your support and participation, we continue to preserve
+            our traditions and spread the message of universal love, dharma, and compassion as taught by Lord Shiva.
+        </p>
+    </section> -->
+
+    <!-- Pooja Timings -->
+    <section id="pooja-timings" class="py-20  text-white" style="background-color: lightgray;">
+        <div class="container" style="padding: 20px 0px; text-align: center;"  >
+          <h2 class="text-center pooja">🕉️ Pooja Timings</h2>
+          <div class="row text-center">
+      
+            <div class="col-md-4 mb-4">
+              <div class="pooja-card  shadow  h-100 animate-card">
+                <img src="assets/images/morning.avif" alt="Morning Aarti" class="img-fluid rounded mb-3 pooja-img" />
+                <i class="fas fa-sun fa-2x mb-2" style="color: #FFA500;"></i> <!-- Sun-like orange -->
+
+                <h5>Morning Aarti</h5>
+                <p>🕕 6:00 AM - 7:00 AM</p>
+              </div>
+            </div>
+      
+            <div class="col-md-4 mb-4">
+              <div class="pooja-card   shadow h-100 animate-card">
+                <img src="assets/images/rudra.avif" alt="Rudrabhishekam" class="img-fluid rounded mb-3 pooja-img" />
+                <i class="fas fa-water fa-2x mb-2" style="color: #f72234;"></i> <!-- DeepSkyBlue -->
+
+                <h5>Rudrabhishekam</h5>
+                <p>🕘 10:00 AM - 11:30 AM</p>
+              </div>
+            </div>
+      
+            <div class="col-md-4 mb-4">
+              <div class="pooja-card   shadow  h-100 animate-card">
+                <img src="assets/images/evening.jpg" alt="Evening Aarti" class="img-fluid rounded mb-3 pooja-img" />
+                <i class="fas fa-moon fa-2x mb-2 text-warning"></i>
+                <h5>Evening Aarti</h5>
+                <p>🕕 6:00 PM - 7:00 PM</p>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+      
+
+
+    <!-- services -->
+     
+  <section class="services-section">
+    <h2>Our  Services</h2>
+    <div class="services-grid">
+      
+        <div class="service-card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="assets/images/vedic.jpg" alt="Vedic Education">
+              </div>
+              <div class="card-back">
+                <h3>Vedic Education</h3>
+                <p>Spreading the wisdom of ancient scriptures, mantras, and Sanskrit teachings to all age groups.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- From Uiverse.io by Pravins01 --> 
+
+          
+
+          <div class="service-card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="assets/images/service21.jpg" alt="Vedic Education">
+              </div>
+              <div class="card-back">
+                <h3>Nature Preservation</h3>
+                <p>Supporting environmental sustainability with tree plantations and eco-awareness programs.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="assets/images/service31.jpg" alt="Vedic Education">
+              </div>
+              <div class="card-back">
+                <h3>Family & Social Welfare</h3>
+                <p>Strengthening community values through counseling, spiritual workshops, and family support.</p>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="assets/images/service4.jpg" alt="Vedic Education">
+              </div>
+              <div class="card-back">
+                <h3>Spiritual Practice</h3>
+
+                <p>Daily pujas, chants, and rituals promoting peace, discipline, and inner transformation.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="assets/images/service5.jpg" alt="Vedic Education">
+              </div>
+              <div class="card-back">
+                <h3>Cow Protection (Goshala)</h3>
+                <p>Maintaining a sacred goshala with love and care for desi cows, aligned with dharma.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="assets/images/service6.jpg" alt="Vedic Education">
+              </div>
+              <div class="card-back">
+                <h3>Meditation & Dharma</h3>
+                <p>Regular meditation sessions and guidance on living a righteous life based on Sanatana Dharma.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="card-inner">
+              <div class="card-front">
+                <img src="assets/images/vedic.jpg" alt="Vedic Education">
+              </div>
+              <div class="card-back">
+                <h3>Vedic Education</h3>
+                <p>Spreading the wisdom of ancient scriptures, mantras, and Sanskrit teachings to all age groups.</p>
+              </div>
+            </div>
+          </div>
+
+    </div>
+  </section>
+
+
+
+    <!-- Gallery (Slider) -->
+ 
+
+
+
+    <!-- Donation Section -->
+    <!-- <section id="donate" class="container text-center">
+        <h2 class="text-warning">Donate</h2>
+        <p>Your support helps us maintain the temple and conduct spiritual events.</p>
+        <a href="https://your-donation-link.com" class="btn btn-warning btn-lg mt-3">Donate Now</a>
+    </section> -->
+
+    <!-- Contact -->
+    <!-- <section id="contact" class="container text-center">
+        <h2 class="text-warning">Contact Us</h2>
+        <p>Email: contact@shivatemple.org</p>
+        <p>Phone: +91 98765 43210</p>
+        <p>Location: Shiva Temple Road, Kashi, India</p>
+    </section> -->
+
+
+
+    <footer>
+        <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+      
+          <!-- About Us -->
+          <div style="flex: 1; min-width: 220px; margin: 20px;">
+            <h3 style="color: #d11a2a;">About Us</h3>
+            <p>You need to be sure there isn’t anything embarrassing hidden in the middle of text.</p>
+            <p>📞 987-987-930-302</p>
+            <p>📧 info@example.com</p>
+            <p>📍 14/A, Poor Street City Tower, New York USA</p>
+          </div>
+      
+          <!-- Information -->
+          <div style="flex: 1; min-width: 150px; margin: 20px;">
+            <h3 style="color: #d11a2a;">Information</h3>
+            <ul style="list-style: none; padding: 0; color: #333;">
+              <li>🕉 Puja</li>
+              <li>🕉 Services</li>
+              <li>🕉 Temple</li>
+              <li>🕉 Holis</li>
+              <li>🕉 Volunteers</li>
+              <li>🕉 Donation</li>
+            </ul>
+          </div>
+      
+          <!-- Others -->
+          <div style="flex: 1; min-width: 150px; margin: 20px;">
+            <h3 style="color: #d11a2a;">Others</h3>
+            <ul style="list-style: none; padding: 0; color: #333;">
+              <li>🕉 Shop</li>
+              <li>🕉 Checkout</li>
+              <li>🕉 Donation</li>
+              <li>🕉 Contact Us</li>
+              <li>🕉 Blog</li>
+            </ul>
+          </div>
+      
+          <!-- Recent Posts -->
+          <div style="flex: 1; min-width: 250px; margin: 20px;">
+            <h3 style="color: #d11a2a;">Recent Posts</h3>
+            <div>
+              <p style="font-size: 14px;">📅 May 20, 2024</p>
+              <p style="font-weight: bold;">Temple companies are being so transparent with their work</p>
+            </div>
+            <div>
+              <p style="font-size: 14px;">📅 May 20, 2024</p>
+              <p style="font-weight: bold;">Testimony love offering so blessed</p>
+            </div>
+            <div>
+              <p style="font-size: 14px;">📅 May 20, 2024</p>
+              <p style="font-weight: bold;">As we've all discovered by now, the world can change</p>
+            </div>
+          </div>
+        </div>
+      
+        <div style="text-align: center; padding: 20px 0; border-top: 1px solid #eee; margin-top: 20px;">
+            <p>COPYRIGHT © SRI SHAKTIPEETHA KOTI LINGA KSHETHRAM - 2025</p>
+            <h2 style="font-family: cursive; color: #d11a2a;">🕉 Maharatri</h2>
+            <div style="margin-top: 15px;">
+              <a href="#" style="margin: 0 5px;"><i class="fab fa-facebook fa-2x"></i></a>
+              <a href="#" style="margin: 0 5px;"><i class="fab fa-linkedin fa-2x"></i></a>
+              <a href="#" style="margin: 0 5px;"><i class="fab fa-twitter fa-2x"></i></a>
+              <!-- <a href="#" style="margin: 0 5px;"><i class="fas fa-arrow-up fa-2x"></i></a> -->
+            </div>
+          </div>
+          
+
+        <div>
+            <p>&copy; 2025 Shiva Temple | Har Har Mahadev 🙏</p>
+        </div>
+      </footer>
+      
+
+    <!-- Footer -->
+   
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/audio.js"></script>
+    <script>
+        const audio = document.getElementById("omChant");
+        const button = document.getElementById("audioToggle");
+        const icon = button.querySelector("i");
+      
+        // Ensure audio doesn't autoplay with sound unless user interacts
+        document.addEventListener("DOMContentLoaded", () => {
+          audio.muted = true; // Keep it muted initially
+        });
+      
+        button.addEventListener("click", () => {
+          if (audio.paused) {
+            audio.muted = false;
+            audio.play();
+            icon.classList.remove("fa-volume-mute");
+            icon.classList.add("fa-volume-up");
+          } else {
+            audio.pause();
+            icon.classList.remove("fa-volume-up");
+            icon.classList.add("fa-volume-mute");
+          }
+        });
+      </script>
+      
+
+
+</body>
+
+</html>

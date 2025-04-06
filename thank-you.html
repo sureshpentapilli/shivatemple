@@ -1,0 +1,156 @@
+<!-- thankyou.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thank You</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link rel="icon" href="assets/images/logo.png" type="image">
+</head>
+
+<body>
+    <!-- Om Chant Audio Toggle -->
+    <button id="audioToggle" onclick="toggleAudio()">
+        <i class="fas fa-volume-up"></i>
+    </button>
+    <audio id="omChant" loop autoplay>
+        <source src="https://your-audio-url.com/om.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="assets/images/logo.png"></a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarNav" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pooja">Pooja</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#donate">Donate</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="container text-center">
+        <h1 class="text-success mb-4">🙏 Thank You!</h1>
+        <h4 id="thankYouMessage" class="mb-3"></h4>
+        <p><strong>Date:</strong> <span id="currentDate" class="fw-bold text-success"></span></p>
+
+        <div class="mt-4">
+            <a href="view-receipt.html" class="btn btn-outline-primary me-2">🧾 View Receipt</a>
+            <a href="index.html" class="btn btn-success">🏠 Back Home</a>
+        </div>
+    </div>
+
+
+    <!-- Gallery (Slider) -->
+    <section id="gallery" class="container py-5">
+        <h2 class="text-warning text-center">Gallery</h2>
+        <div id="carouselMulti" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="assets/images/gallery/27.jpeg" class="img-fluid rounded" alt="Shiva 1">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="assets/images/gallery/28.jpeg" class="img-fluid rounded" alt="Shiva 2">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="assets/images/gallery/29.jpeg" class="img-fluid rounded" alt="Shiva 3">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="assets/images/gallery/30.jpeg" class="img-fluid rounded" alt="Shiva 4">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="assets/images/gallery/31.jpeg" class="img-fluid rounded" alt="Shiva 5">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="assets/images/gallery/32.jpeg" class="img-fluid rounded" alt="Shiva 6">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="assets/images/gallery/33.jpeg" class="img-fluid rounded" alt="Shiva 4">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="assets/images/gallery/34.jpeg" class="img-fluid rounded" alt="Shiva 5">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="assets/images/gallery/32.jpeg" class="img-fluid rounded" alt="Shiva 6">
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more .carousel-item blocks as needed -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselMulti" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselMulti" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+        </div>
+    </section>
+
+
+
+    <!-- Donation Section -->
+    <section id="donate" class="container text-center">
+        <h2 class="text-warning">Donate</h2>
+        <p>Your support helps us maintain the temple and conduct spiritual events.</p>
+        <a href="https://your-donation-link.com" class="btn btn-warning btn-lg mt-3">Donate Now</a>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="container text-center">
+        <h2 class="text-warning">Contact Us</h2>
+        <p>Email: contact@shivatemple.org</p>
+        <p>Phone: +91 98765 43210</p>
+        <p>Location: Shiva Temple Road, Kashi, India</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Shiva Temple | Har Har Mahadev 🙏</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/audio.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const data = JSON.parse(localStorage.getItem("bookingData"));
+        
+            if (data) {
+              const highlightedName = `<span class="fw-bold text-success">${data.name}</span>`;
+              const highlightedSlot = `<span class="fw-bold text-success">${data.slot}</span>`;
+              const thankYouText = `${highlightedName}, your slot ${highlightedSlot} has been successfully booked. We appreciate your devotion.`;
+              document.getElementById("thankYouMessage").innerHTML = thankYouText;
+            }
+        
+            const date = new Date().toLocaleString();
+            document.getElementById("currentDate").textContent = date;
+          });
+    </script>
+</body>
+
+</html>
