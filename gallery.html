@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - Bootstrap</title>
+ 
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="assets/css/style.css" rel="stylesheet" />
+
+    <style>
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        display: block;
+        transition: 0.5s ease;
+      }
+
+      .gallery-item:hover img {
+        filter: grayscale(100%) brightness(60%);
+        transform: scale(1.05);
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        transition: opacity 0.3s ease;
+        cursor: pointer;
+      }
+
+      .gallery-item:hover .overlay {
+        opacity: 1;
+      }
+
+      .plus-icon {
+        font-size: 40px;
+        color: white;
+        font-weight: bold;
+      }
+
+      /* Modal styles */
+      .modal-img {
+        max-width: 100%;
+        max-height: 80vh;
+        display: block;
+        margin: auto;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body class="">
+<div>
+<!-- Om Chant Audio Toggle -->
+<button id="audioToggle">
+    <i class="fas fa-volume-mute"></i>
+  </button>
+  
+  <audio id="omChant" loop>
+    <source src="assets/om-chant.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="assets/images/logo.png" alt="Logo" style="height: 100px;width: 100px; ">
+                <div class="mb-0 text-white heading-text">
+                  SRI SHAKTIPEETHA
+                  KOTI LINGA<br>
+                  KSHETHRAM
+                </div>
+              </a>
+              
+              
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarNav" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pooja">Pooja</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+    <div class="container" style="padding: 20px 0px;">
+      <div class="row">
+        <!-- Gallery Item -->
+        <div class="col-md-3 col-sm-6">
+          <div class="gallery-item">
+            <img src="./assets/images/gallery/32.jpeg" alt="Image 1" />
+            <div class="overlay" onclick="openModal('./assets/images/gallery/32.jpeg')">
+              <span class="plus-icon">+</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="gallery-item">
+            <img src="./assets/images/gallery/33.jpeg" alt="Image 2" />
+            <div class="overlay" onclick="openModal('./assets/images/gallery/33.jpeg')">
+              <span class="plus-icon">+</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="gallery-item">
+            <img src="./assets/images/03.jpg" alt="Image 3" />
+            <div class="overlay" onclick="openModal('./assets/images/03.jpg')">
+              <span class="plus-icon">+</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="gallery-item">
+            <img src="./assets/images/04.jpg" alt="Image 4" />
+            <div class="overlay" onclick="openModal('./assets/images/04.jpg')">
+              <span class="plus-icon">+</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+            <div class="gallery-item">
+              <img src="./assets/images/slide1.jpg" alt="Image 4" />
+              <div class="overlay" onclick="openModal('./assets/images/slide1.jpg')">
+                <span class="plus-icon">+</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="gallery-item">
+              <img src="./assets/images/slide2.jpg" alt="Image 4" />
+              <div class="overlay" onclick="openModal('/assets/images/slide2.jpg')">
+                <span class="plus-icon">+</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="gallery-item">
+              <img src="./assets/images/slide3.jpg" alt="Image 4" />
+              <div class="overlay" onclick="openModal('./assets/images/slide3.jpg')">
+                <span class="plus-icon">+</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="gallery-item">
+              <img src="./assets/images/04.jpg" alt="Image 4" />
+              <div class="overlay" onclick="openModal('./assets/images/04.jpg')">
+                <span class="plus-icon">+</span>
+              </div>
+            </div>
+          </div>
+
+        <!-- Add more .col-md-3 items for more images -->
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="imageModal"
+      tabindex="-1"
+      aria-labelledby="imageModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-transparent border-0">
+          <img id="modalImage" class="modal-img" />
+        </div>
+      </div>
+    </div>
+
+
+    <footer>
+        <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+      
+          <!-- About Us -->
+          <div style="flex: 1; min-width: 220px; margin: 20px;">
+            <h3 style="color: #d11a2a;">About Us</h3>
+            <p>You need to be sure there isn’t anything embarrassing hidden in the middle of text.</p>
+            <p>📞 9100135553</p>
+            <p>📧 info@example.com</p>
+            <p>📍 minarva complex,vizag</p>
+          </div>
+      
+          <!-- Information -->
+          <div style="flex: 1; min-width: 150px; margin: 20px;">
+            <h3 style="color: #d11a2a;">Information</h3>
+            <ul style="list-style: none; padding: 0; color: #333;">
+              <li>🕉 Puja</li>
+              <li>🕉 Services</li>
+              <li>🕉 Temple</li>
+              <li>🕉 Holis</li>
+              <li>🕉 Volunteers</li>
+              <li>🕉 Donation</li>
+            </ul>
+          </div>
+      
+          <!-- Others -->
+          <div style="flex: 1; min-width: 150px; margin: 20px;">
+            <h3 style="color: #d11a2a;">Others</h3>
+            <ul style="list-style: none; padding: 0; color: #333;">
+              <li>🕉 Shop</li>
+              <li>🕉 Checkout</li>
+              <li>🕉 Donation</li>
+              <li>🕉 Contact Us</li>
+              <li>🕉 Blog</li>
+            </ul>
+          </div>
+      
+          <!-- Recent Posts -->
+          <div style="flex: 1; min-width: 250px; margin: 20px;">
+            <h3 style="color: #d11a2a;">Recent Posts</h3>
+            <div>
+              <p style="font-size: 14px;">📅 May 20, 2024</p>
+              <p style="font-weight: bold;">Temple companies are being so transparent with their work</p>
+            </div>
+            <div>
+              <p style="font-size: 14px;">📅 May 20, 2024</p>
+              <p style="font-weight: bold;">Testimony love offering so blessed</p>
+            </div>
+            <div>
+              <p style="font-size: 14px;">📅 May 20, 2024</p>
+              <p style="font-weight: bold;">As we've all discovered by now, the world can change</p>
+            </div>
+          </div>
+        </div>
+      
+        <div style="text-align: center; padding: 20px 0; border-top: 1px solid #eee; margin-top: 20px;">
+            <p>COPYRIGHT © SRI SHAKTIPEETHA KOTI LINGA KSHETHRAM - 2025</p>
+            <h2 style="font-family: cursive; color: #d11a2a;">🕉 Maharatri</h2>
+            <div style="margin-top: 15px;">
+              <a href="#" style="margin: 0 5px;"><i class="fab fa-facebook fa-2x"></i></a>
+              <a href="#" style="margin: 0 5px;"><i class="fab fa-linkedin fa-2x"></i></a>
+              <a href="#" style="margin: 0 5px;"><i class="fab fa-twitter fa-2x"></i></a>
+              <!-- <a href="#" style="margin: 0 5px;"><i class="fas fa-arrow-up fa-2x"></i></a> -->
+            </div>
+          </div>
+          
+
+        <div>
+            <p>&copy; 2025 Shiva Temple | Har Har Mahadev 🙏</p>
+        </div>
+      </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Modal Script -->
+    <script>
+        function openModal(src) {
+          const modalImg = document.getElementById("modalImage");
+          modalImg.src = src;
+          const myModal = new bootstrap.Modal(document.getElementById("imageModal"));
+          myModal.show();
+        }
+      </script>
+      
+
+<script>
+    const audio = document.getElementById("omChant");
+    const button = document.getElementById("audioToggle");
+    const icon = button.querySelector("i");
+  
+    // Ensure audio doesn't autoplay with sound unless user interacts
+    document.addEventListener("DOMContentLoaded", () => {
+      audio.muted = true; // Keep it muted initially
+    });
+  
+    button.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.muted = false;
+        audio.play();
+        icon.classList.remove("fa-volume-mute");
+        icon.classList.add("fa-volume-up");
+      } else {
+        audio.pause();
+        icon.classList.remove("fa-volume-up");
+        icon.classList.add("fa-volume-mute");
+      }
+    });
+  </script>
+  </body>
+</html>

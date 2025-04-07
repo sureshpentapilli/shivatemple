@@ -23,7 +23,16 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="assets/images/logo.png"></a>
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <img src="assets/images/logo.png" alt="Logo" style="height: 100px;width: 100px; ">
+                <div class="mb-0 text-white heading-text">
+                  SRI SHAKTIPEETHA
+                  KOTI LINGA<br>
+                  KSHETHRAM
+                </div>
+              </a>
+              
+              
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -33,7 +42,7 @@
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#pooja">Pooja</a></li>
                     <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#donate">Donate</a></li>
+                    <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -54,83 +63,80 @@
     </div>
 
 
-    <!-- Gallery (Slider) -->
-    <section id="gallery" class="container py-5">
-        <h2 class="text-warning text-center">Gallery</h2>
-        <div id="carouselMulti" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="assets/images/gallery/27.jpeg" class="img-fluid rounded" alt="Shiva 1">
-                        </div>
-                        <div class="col-md-4">
-                            <img src="assets/images/gallery/28.jpeg" class="img-fluid rounded" alt="Shiva 2">
-                        </div>
-                        <div class="col-md-4">
-                            <img src="assets/images/gallery/29.jpeg" class="img-fluid rounded" alt="Shiva 3">
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="assets/images/gallery/30.jpeg" class="img-fluid rounded" alt="Shiva 4">
-                        </div>
-                        <div class="col-md-4">
-                            <img src="assets/images/gallery/31.jpeg" class="img-fluid rounded" alt="Shiva 5">
-                        </div>
-                        <div class="col-md-4">
-                            <img src="assets/images/gallery/32.jpeg" class="img-fluid rounded" alt="Shiva 6">
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="assets/images/gallery/33.jpeg" class="img-fluid rounded" alt="Shiva 4">
-                        </div>
-                        <div class="col-md-4">
-                            <img src="assets/images/gallery/34.jpeg" class="img-fluid rounded" alt="Shiva 5">
-                        </div>
-                        <div class="col-md-4">
-                            <img src="assets/images/gallery/32.jpeg" class="img-fluid rounded" alt="Shiva 6">
-                        </div>
-                    </div>
-                </div>
-                <!-- Add more .carousel-item blocks as needed -->
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselMulti" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselMulti" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
-
-        </div>
-    </section>
-
-
-
-    <!-- Donation Section -->
-    <section id="donate" class="container text-center">
-        <h2 class="text-warning">Donate</h2>
-        <p>Your support helps us maintain the temple and conduct spiritual events.</p>
-        <a href="https://your-donation-link.com" class="btn btn-warning btn-lg mt-3">Donate Now</a>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="container text-center">
-        <h2 class="text-warning">Contact Us</h2>
-        <p>Email: contact@shivatemple.org</p>
-        <p>Phone: +91 98765 43210</p>
-        <p>Location: Shiva Temple Road, Kashi, India</p>
-    </section>
-
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Shiva Temple | Har Har Mahadev 🙏</p>
-    </footer>
+        <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+      
+          <!-- About Us -->
+          <div style="flex: 1; min-width: 220px; margin: 20px;">
+            <h3 style="color: #d11a2a;">About Us</h3>
+            <p>You need to be sure there isn’t anything embarrassing hidden in the middle of text.</p>
+            <p>📞 9100135553</p>
+            <p>📧 info@example.com</p>
+            <p>📍 minarva complex,vizag</p>
+          </div>
+      
+          <!-- Information -->
+          <div style="flex: 1; min-width: 150px; margin: 20px;">
+            <h3 style="color: #d11a2a;">Information</h3>
+            <ul style="list-style: none; padding: 0; color: #333;">
+              <li>🕉 Puja</li>
+              <li>🕉 Services</li>
+              <li>🕉 Temple</li>
+              <li>🕉 Holis</li>
+              <li>🕉 Volunteers</li>
+              <li>🕉 Donation</li>
+            </ul>
+          </div>
+      
+          <!-- Others -->
+          <div style="flex: 1; min-width: 150px; margin: 20px;">
+            <h3 style="color: #d11a2a;">Others</h3>
+            <ul style="list-style: none; padding: 0; color: #333;">
+              <li>🕉 Shop</li>
+              <li>🕉 Checkout</li>
+              <li>🕉 Donation</li>
+              <li>🕉 Contact Us</li>
+              <li>🕉 Blog</li>
+            </ul>
+          </div>
+      
+          <!-- Recent Posts -->
+          <div style="flex: 1; min-width: 250px; margin: 20px;">
+            <h3 style="color: #d11a2a;">Recent Posts</h3>
+            <div>
+              <p style="font-size: 14px;">📅 May 20, 2024</p>
+              <p style="font-weight: bold;">Temple companies are being so transparent with their work</p>
+            </div>
+            <div>
+              <p style="font-size: 14px;">📅 May 20, 2024</p>
+              <p style="font-weight: bold;">Testimony love offering so blessed</p>
+            </div>
+            <div>
+              <p style="font-size: 14px;">📅 May 20, 2024</p>
+              <p style="font-weight: bold;">As we've all discovered by now, the world can change</p>
+            </div>
+          </div>
+        </div>
+      
+        <div style="text-align: center; padding: 20px 0; border-top: 1px solid #eee; margin-top: 20px;">
+            <p>COPYRIGHT © SRI SHAKTIPEETHA KOTI LINGA KSHETHRAM - 2025</p>
+            <h2 style="font-family: cursive; color: #d11a2a;">🕉 Maharatri</h2>
+            <div style="margin-top: 15px;">
+              <a href="#" style="margin: 0 5px;"><i class="fab fa-facebook fa-2x"></i></a>
+              <a href="#" style="margin: 0 5px;"><i class="fab fa-linkedin fa-2x"></i></a>
+              <a href="#" style="margin: 0 5px;"><i class="fab fa-twitter fa-2x"></i></a>
+              <!-- <a href="#" style="margin: 0 5px;"><i class="fas fa-arrow-up fa-2x"></i></a> -->
+            </div>
+          </div>
+          
+
+        <div>
+            <p>&copy; 2025 Shiva Temple | Har Har Mahadev 🙏</p>
+        </div>
+      </footer>
+ 
+
+ 
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
